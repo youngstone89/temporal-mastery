@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/youngstone/Workspace/temporal-mastery'
+mvn clean install -Dorg.slf4j.simpleLogger.defaultLogLevel=info 2>/dev/null
+make: Leaving directory `/Users/youngstone/Workspace/temporal-mastery'
+ 

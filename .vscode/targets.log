@@ -1,0 +1,283 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+
+# Make data base, printed on Mon Nov 18 21:19:50 2024
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+PROVIDE_FULLSTACK_ACTION = true
+# environment
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
+# environment
+NVM_INC = /Users/youngstone/.nvm/versions/node/v20.13.1/include/node
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+CPPFLAGS = -I/usr/local/opt/sqlite/include
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/youngstone/Workspace/temporal-mastery
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-kr","resolvedLanguage":"en","defaultMessagesFile":"/Applications/Visual Studio Code.app/Contents/Resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
+# environment
+_ = /usr/bin/make
+# environment
+DATASTORE_TYPE = kubernetes
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+KUBECONFIG = /Users/youngstone/.kube/config
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /usr/local/opt/go@1.17/bin:/usr/local/lib/ruby/gems/3.1.0/bin:/usr/local/opt/ruby/bin:/usr/local/opt/python@3.7/bin:/usr/local/opt/python@3.8/bin:/Users/youngstone/.nvm/versions/node/v20.13.1/bin:/usr/local/opt/sqlite/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/ncurses/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/youngstone/Flutter/flutter/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+GOLANG_EXECUTABLE = go
+# environment
+THREE_SCALE_USER_TOKEN = 207c527cfc2a6b8dcf4fa43ad7a976da
+# environment
+NVM_BIN = /Users/youngstone/.nvm/versions/node/v20.13.1/bin
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+LDFLAGS = -L/usr/local/opt/sqlite/lib
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+UUID = d8270ece-473b-445f-b797-a9348538e979
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.XdteZRmP6b/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+PWD = /Users/youngstone/Workspace/temporal-mastery
+# environment
+PKG_CONFIG_PATH = /usr/local/opt/sqlite/lib/pkgconfig
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/youngstone
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/youngstone/Library/Application Support/Code/CachedData/384ff7382de624fb94dbaf6da11977bba1ecd427
+# environment
+LOGNAME = youngstone
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+NVM_CD_FLAGS = -q
+# environment
+TELEMETRY_ID = 5c013140-62a2-4f4c-8ceb-275d08aeaf64
+# environment
+ZSH = /Users/youngstone/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# environment
+JAVA_HOME = /Library/Java/JavaVirtualMachines/temurin-21.jdk/Java/home
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = youngstone
+# makefile
+.DEFAULT_GOAL := build
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# environment
+UTM_SOURCE = vscode
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/3v/c_xbzzk93pzf2fvc_1bd_r3c0000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/youngstone/Library/Application Support/Code/1.94-main.sock
+# environment
+MallocNanoZone = 0
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+NVM_DIR = /Users/youngstone/.nvm
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.12942516052.12942516058
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# environment
+RECOMMENDER_API_URL = https://gw.api.openshift.io//api/v2
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+VSCODE_PID = 68330
+# variable set hash-table stats:
+# Load=81/1024=8%, Rehash=0, Collisions=3/105=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777220, inode 12942872299): 13 files, no impossibilities.
+
+# 13 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: build clean worker run
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2024-11-14 21:23:34
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+worker:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 10):
+	@mvn compile exec:java -Dexec.mainClass="moneytransfer.MoneyTransferWorker" -Dorg.slf4j.simpleLogger.defaultLogLevel=warn
+	
+
+build:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 4):
+	@mvn clean install -Dorg.slf4j.simpleLogger.defaultLogLevel=info 2>/dev/null
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+run:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 13):
+	@mvn compile exec:java -Dexec.mainClass="moneytransfer.TransferApp" -Dorg.slf4j.simpleLogger.defaultLogLevel=warn
+	
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 7):
+	@mvn clean -q -Dmaven.logging.level=0
+	
+
+# files hash-table stats:
+# Load=9/1024=1%, Rehash=0, Collisions=0/25=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Mon Nov 18 21:19:50 2024
+
+ 
+make: *** No rule to make target `all'.  Stop.
+ 
