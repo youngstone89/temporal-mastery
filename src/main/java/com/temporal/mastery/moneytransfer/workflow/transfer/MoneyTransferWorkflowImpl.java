@@ -63,7 +63,13 @@ public class MoneyTransferWorkflowImpl implements MoneyTransferWorkflow {
         // Stage 1: Withdraw funds from source
         try {
             // Launch `withdrawal` Activity
-            accountActivityStub.withdraw(sourceAccountId, transactionReferenceId, amountToTransfer);
+            int version = Workflow.getVersion("withDrawVersion", Workflow.DEFAULT_VERSION, 1);
+            if (version == Workflow.DEFAULT_VERSION) {
+                accountActivityStub.withdraw(sourceAccountId, transactionReferenceId, amountToTransfer);
+            } else {
+                accountActivityStub.withdrawV2(destinationAccountId, transactionReferenceId, amountToTransfer);
+            }
+
         } catch (Exception e) {
             // If the withdrawal fails, for any exception, it's caught here
             System.out.printf("[%s] Withdrawal of $%d from account %s failed", transactionReferenceId, amountToTransfer,

@@ -10,6 +10,10 @@ public interface AccountActivity {
     @ActivityMethod
     void withdraw(String accountId, String referenceId, int amount);
 
+    // Withdraw an amount of money from the source account
+    @ActivityMethod
+    void withdrawV2(String accountId, String referenceId, int amount);
+
     // Deposit an amount of money into the destination account
     @ActivityMethod
     void deposit(String accountId, String referenceId, int amount);

@@ -9,9 +9,9 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import com.temporal.mastery.moneytransfer.Shared;
 import com.temporal.mastery.moneytransfer.activity.account.AccountActivity;
 import com.temporal.mastery.moneytransfer.activity.account.AccountActivityImpl;
+import com.temporal.mastery.moneytransfer.utils.Shared;
 import com.temporal.mastery.moneytransfer.workflow.transfer.CoreTransactionDetails;
 import com.temporal.mastery.moneytransfer.workflow.transfer.MoneyTransferWorkflow;
 import com.temporal.mastery.moneytransfer.workflow.transfer.MoneyTransferWorkflowImpl;

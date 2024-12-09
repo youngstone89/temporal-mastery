@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import com.temporal.mastery.moneytransfer.Shared;
+import com.temporal.mastery.moneytransfer.utils.Shared;
 import com.temporal.mastery.moneytransfer.workflow.transfer.CoreTransactionDetails;
 import com.temporal.mastery.moneytransfer.workflow.transfer.MoneyTransferWorkflow;
 import com.temporal.mastery.moneytransfer.workflow.transfer.TransactionDetails;

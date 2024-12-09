@@ -4,11 +4,28 @@ package com.temporal.mastery.moneytransfer.activity.account;
 import io.temporal.activity.Activity;
 
 public class AccountActivityImpl implements AccountActivity {
+
+    private AccountService accountService;
+
+    public AccountActivityImpl() {
+        this.accountService = new AccountService();
+    }
+
     // Mock up the withdrawal of an amount of money from the source account
     @Override
     public void withdraw(String accountId, String referenceId, int amount) {
         System.out.printf("\nWithdrawing $%d from account %s.\n[ReferenceId: %s]\n", amount, accountId, referenceId);
         System.out.flush();
+        accountService.doSomethingV1("v1");
+
+    }
+
+    @Override
+    public void withdrawV2(String accountId, String referenceId, int amount) {
+        System.out.printf("\nWithdrawingV2 $%d from account %s.\n[ReferenceId: %s]\n", amount, accountId, referenceId);
+        System.out.flush();
+        accountService.doSomethingV2("v2");
+
     }
 
     // Mock up the deposit of an amount of money from the destination account
@@ -40,5 +57,6 @@ public class AccountActivityImpl implements AccountActivity {
         System.out.printf("\nRefunding $%d to account %s.\n[ReferenceId: %s]\n", amount, accountId, referenceId);
         System.out.flush();
     }
+
 }
 // @@@SNIPEND

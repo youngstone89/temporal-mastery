@@ -1,8 +1,8 @@
 // @@@SNIPSTART money-transfer-java-worker
 package com.temporal.mastery.moneytransfer.worker;
 
-import com.temporal.mastery.moneytransfer.Shared;
 import com.temporal.mastery.moneytransfer.activity.account.AccountActivityImpl;
+import com.temporal.mastery.moneytransfer.utils.Shared;
 import com.temporal.mastery.moneytransfer.workflow.transfer.MoneyTransferWorkflowImpl;
 
 import io.temporal.client.WorkflowClient;
