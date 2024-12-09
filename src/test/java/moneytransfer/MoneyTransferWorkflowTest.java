@@ -5,14 +5,22 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import com.temporal.mastery.moneytransfer.Shared;
+import com.temporal.mastery.moneytransfer.activity.account.AccountActivity;
+import com.temporal.mastery.moneytransfer.activity.account.AccountActivityImpl;
+import com.temporal.mastery.moneytransfer.workflow.transfer.CoreTransactionDetails;
+import com.temporal.mastery.moneytransfer.workflow.transfer.MoneyTransferWorkflow;
+import com.temporal.mastery.moneytransfer.workflow.transfer.MoneyTransferWorkflowImpl;
+import com.temporal.mastery.moneytransfer.workflow.transfer.TransactionDetails;
+
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.testing.TestWorkflowEnvironment;
 import io.temporal.worker.Worker;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
 public class MoneyTransferWorkflowTest {
 
@@ -20,7 +28,7 @@ public class MoneyTransferWorkflowTest {
     private Worker worker;
     private WorkflowClient workflowClient;
 
-    @Before
+    @BeforeAll
     public void setUp() {
         testEnv = TestWorkflowEnvironment.newInstance();
         worker = testEnv.newWorker(Shared.MONEY_TRANSFER_TASK_QUEUE);
@@ -28,7 +36,7 @@ public class MoneyTransferWorkflowTest {
         workflowClient = testEnv.getWorkflowClient();
     }
 
-    @After
+    @AfterAll
     public void tearDown() {
         testEnv.close();
     }

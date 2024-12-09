@@ -6,8 +6,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
 
-# Make data base, printed on Mon Nov 18 21:19:50 2024
+# Make data base, printed on Mon Dec  9 20:08:55 2024
 
 # Variables
 
@@ -106,7 +107,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 1
 # environment
-JAVA_HOME = /Library/Java/JavaVirtualMachines/temurin-21.jdk/Java/home
+JAVA_HOME = /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -172,7 +173,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 68330
+VSCODE_PID = 20743
 # variable set hash-table stats:
 # Load=81/1024=8%, Rehash=0, Collisions=3/105=3%
 
@@ -182,9 +183,9 @@ VSCODE_PID = 68330
 
 # Directories
 
-# . (device 16777220, inode 12942872299): 13 files, no impossibilities.
+# . (device 16777220, inode 12942872299): 20 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -276,7 +277,7 @@ clean:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Nov 18 21:19:50 2024
+# Finished Make data base on Mon Dec  9 20:08:55 2024
 
  
 make: *** No rule to make target `all'.  Stop.
