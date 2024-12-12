@@ -1,6 +1,9 @@
 // @@@SNIPSTART money-transfer-java-coreTransactionDetails
 package com.temporal.mastery.moneytransfer.workflow.transfer;
 
+import lombok.Getter;
+
+@Getter
 public class CoreTransactionDetails implements TransactionDetails {
     private String sourceAccountId;
     private String destinationAccountId;
@@ -21,24 +24,6 @@ public class CoreTransactionDetails implements TransactionDetails {
         this.destinationAccountId = destinationAccountId;
         this.transactionReferenceId = transactionReferenceId;
         this.amountToTransfer = amountToTransfer;
-    }
-
-    // MARK: Getter methods
-
-    public String getSourceAccountId() {
-        return sourceAccountId;
-    }
-
-    public String getDestinationAccountId() {
-        return destinationAccountId;
-    }
-
-    public String getTransactionReferenceId() {
-        return transactionReferenceId;
-    }
-
-    public int getAmountToTransfer() {
-        return amountToTransfer;
     }
 }
 // @@@SNIPEND

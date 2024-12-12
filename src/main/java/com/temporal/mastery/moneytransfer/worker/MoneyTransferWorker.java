@@ -2,6 +2,7 @@
 package com.temporal.mastery.moneytransfer.worker;
 
 import com.temporal.mastery.moneytransfer.activity.account.AccountActivityImpl;
+import com.temporal.mastery.moneytransfer.activity.instrumentation.LoggingActivityImpl;
 import com.temporal.mastery.moneytransfer.utils.Shared;
 import com.temporal.mastery.moneytransfer.workflow.transfer.MoneyTransferWorkflowImpl;
 
@@ -35,7 +36,7 @@ public class MoneyTransferWorker {
         // Register Activity implementation(s) with this Worker.
         // The implementation must be known at runtime to dispatch Activity tasks
         // Activities are stateless and thread safe so a shared instance is used.
-        worker.registerActivitiesImplementations(new AccountActivityImpl());
+        worker.registerActivitiesImplementations(new AccountActivityImpl(), new LoggingActivityImpl());
 
         System.out.println("Worker is running and actively polling the Task Queue.");
         System.out.println("To quit, use ^C to interrupt.");

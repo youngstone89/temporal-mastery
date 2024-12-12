@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.temporal.mastery.moneytransfer.activity.account.AccountActivity;
+import com.temporal.mastery.moneytransfer.activity.instrumentation.LoggingActivity;
 
 import io.temporal.activity.ActivityOptions;
 import io.temporal.common.RetryOptions;
@@ -49,6 +50,9 @@ public class MoneyTransferWorkflowImpl implements MoneyTransferWorkflow {
     private final AccountActivity accountActivityStub = Workflow.newActivityStub(AccountActivity.class,
             defaultActivityOptions, perActivityMethodOptions);
 
+    private final LoggingActivity loggingActivityStub = Workflow.newActivityStub(LoggingActivity.class,
+            defaultActivityOptions, perActivityMethodOptions);
+
     // The transfer method is the entry point to the Workflow
     // Activity method executions can be orchestrated here or from within other
     // Activity methods
@@ -60,16 +64,15 @@ public class MoneyTransferWorkflowImpl implements MoneyTransferWorkflow {
         String transactionReferenceId = transaction.getTransactionReferenceId();
         int amountToTransfer = transaction.getAmountToTransfer();
 
+        // Non-deterministic error cause test
+        handleLoggigActivityWithVersion();
         // Stage 1: Withdraw funds from source
         try {
             // Launch `withdrawal` Activity
-            int version = Workflow.getVersion("withDrawVersion", Workflow.DEFAULT_VERSION, 1);
-            if (version == Workflow.DEFAULT_VERSION) {
-                accountActivityStub.withdraw(sourceAccountId, transactionReferenceId, amountToTransfer);
-            } else {
-                accountActivityStub.withdrawV2(destinationAccountId, transactionReferenceId, amountToTransfer);
-            }
+            accountActivityStub.withdraw(sourceAccountId, transactionReferenceId, amountToTransfer);
 
+            // deterministically should be here
+            // handleLoggigActivityWithVersion();
         } catch (Exception e) {
             // If the withdrawal fails, for any exception, it's caught here
             System.out.printf("[%s] Withdrawal of $%d from account %s failed", transactionReferenceId, amountToTransfer,
@@ -121,6 +124,18 @@ public class MoneyTransferWorkflowImpl implements MoneyTransferWorkflow {
 
             // Rethrowing the exception causes a Workflow Task failure
             throw (e);
+        }
+
+    }
+
+    private void handleLoggigActivityWithVersion() {
+        int versionLoggingActivityVersion = Workflow.getVersion("versionLoggingActivity", Workflow.DEFAULT_VERSION, 1);
+        if (versionLoggingActivityVersion == Workflow.DEFAULT_VERSION) {
+            loggingActivityStub.logV1("I am -1");
+        } else if (versionLoggingActivityVersion == 1) {
+            loggingActivityStub.logV1("I am version 1");
+        } else {
+            loggingActivityStub.logV1(String.format("I am version %d", versionLoggingActivityVersion));
         }
     }
 }
